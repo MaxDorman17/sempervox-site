@@ -287,10 +287,10 @@ h1, h2, h3, h4 {
 .service-card {
   background: var(--bg);
   padding: 32px 28px;
-  transition: background .15s;
+  transition: background .15s, box-shadow .2s, transform .2s;
   cursor: default;
 }
-.service-card:hover { background: #f0f4fb; }
+.service-card:hover { background: #f0f4fb; box-shadow: 0 8px 32px rgba(26,52,97,.1); transform: translateY(-3px); }
 .service-icon {
   width: 44px; height: 44px;
   background: #e8f0fc;
@@ -620,6 +620,74 @@ h1, h2, h3, h4 {
 }
 .support-card h3 { font-size: .95rem; color: var(--navy); margin-bottom: 6px; }
 .support-card p { font-size: .84rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+
+/* ── Hero photo overlay ──────────────────────────────────────────────────────── */
+.hero { position: relative; overflow: hidden; }
+.hero-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: .13;
+  filter: grayscale(20%) brightness(.75);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-inner { position: relative; z-index: 1; }
+
+/* ── Partner logo grid ───────────────────────────────────────────────────────── */
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+.partner-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 86px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  transition: border-color .18s, box-shadow .18s;
+}
+.partner-logo-card:hover {
+  border-color: #b0c4e8;
+  box-shadow: 0 4px 18px rgba(26,52,97,.09);
+}
+.partner-logo-card img {
+  max-height: 32px;
+  max-width: 110px;
+  width: auto; height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(.55);
+  transition: filter .22s;
+}
+.partner-logo-card:hover img { filter: grayscale(0%) opacity(1); }
+.partner-logo-text {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.partner-logo-card:hover .partner-logo-text { color: var(--navy); }
+
+/* ── Section / about photos ──────────────────────────────────────────────────── */
+.about-photo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  display: block;
+  box-shadow: 0 12px 48px rgba(26,52,97,.16);
+}
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {

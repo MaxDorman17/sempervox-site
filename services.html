@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css?v=3"/>
+<link rel="stylesheet" href="style.css?v=4"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -37,27 +37,103 @@
 
   <div class="page-hero">
     <div class="container">
-      <span class="label">Services</span>
-      <h1>Managed IT across six service areas.</h1>
-      <p>We don't do one thing well and bolt on the rest. Each of these services is core to what we do — supported by the right technology partnerships and experienced people.</p>
+      <span class="label">What we do</span>
+      <h1>Managed IT across<br>six service areas.</h1>
+      <p>We don't do one thing well and bolt on the rest. Each service is core to what we do — backed by the right technology partnerships and experienced people.</p>
     </div>
   </div>
 
+  <!-- ── Service overview cards ─────────────────────────────────────────────── -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="services-overview">
+
+        <a href="#transformation" class="svc-card">
+          <span class="svc-card-num">Service 01</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Digital Transformation</h3>
+          <p>Microsoft 365, Azure, and cloud migration — technology that scales with your business.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+        <a href="#security" class="svc-card">
+          <span class="svc-card-num">Service 02</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Security</h3>
+          <p>Fortinet firewalls, Cyber Essentials, endpoint protection, and staff security awareness training.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+        <a href="#networks" class="svc-card">
+          <span class="svc-card-num">Service 03</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Networks</h3>
+          <p>Ubiquiti wireless, DrayTek routing, structured cabling, VLAN design, and VPN for all sites.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+        <a href="#mobility" class="svc-card">
+          <span class="svc-card-num">Service 04</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Mobility</h3>
+          <p>MDM, BYOD policies, mobile airtime, and secure remote access from any device.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+        <a href="#uc" class="svc-card">
+          <span class="svc-card-num">Service 05</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.61 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.18v-.26z"/></svg>
+          </div>
+          <h3>Unified Communications</h3>
+          <p>Microsoft Teams Voice, hosted telephony, call queues, and ongoing number management.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+        <a href="#connectivity" class="svc-card">
+          <span class="svc-card-num">Service 06</span>
+          <div class="svc-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6l5.5 5.5L12 6l5.5 5.5L23 6"/><path d="M1 18l5.5-5.5L12 18l5.5-5.5L23 18"/></svg>
+          </div>
+          <h3>Resilient Connectivity</h3>
+          <p>Leased lines, 4G/5G failover, bonded broadband, and multi-site WAN connectivity.</p>
+          <span class="svc-card-arrow">Learn more →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Service detail sections ────────────────────────────────────────────── -->
   <section class="section">
     <div class="container">
 
-      <div class="service-full" id="transformation">
+      <!-- 01 Digital Transformation -->
+      <div class="svc-inner" id="transformation">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">01</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <div class="service-full-label">Service 01</div>
-          <div class="service-full-title">Digital Transformation</div>
+          <h2 class="svc-title">Digital Transformation</h2>
         </div>
-        <div class="service-full-body">
-          <p>Digital transformation isn't a project with an end date — it's a continuous process of making your technology work harder for your business. We assess your current IT landscape, identify what's holding you back, and build a practical roadmap that aligns technology investment with your actual business goals.</p>
-          <p>Whether that means migrating to Microsoft 365, moving infrastructure to Azure, automating manual processes, or retiring legacy systems that cost more to maintain than they're worth — we plan it, deliver it, and support the outcome.</p>
-          <p>We don't sell technology for its own sake. Every recommendation is grounded in a genuine understanding of how your organisation operates and what would meaningfully improve it.</p>
+        <div>
+          <p class="svc-intro">We assess your current IT landscape, identify what's holding you back, and build a practical roadmap aligned to your business goals. Whether that means migrating to Microsoft 365, moving to Azure, or retiring legacy systems — we plan it, deliver it, and support the outcome.</p>
+          <ul class="svc-list">
+            <li>Microsoft 365 migration, licensing, and ongoing management</li>
+            <li>Azure infrastructure design, deployment, and cloud hosting</li>
+            <li>Legacy system audit and modernisation planning</li>
+            <li>Business process automation and workflow improvements</li>
+            <li>Strategic IT roadmap planning aligned to business objectives</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">Microsoft 365</span>
             <span class="service-tag">Azure</span>
@@ -65,21 +141,31 @@
             <span class="service-tag">Process automation</span>
             <span class="service-tag">Legacy modernisation</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
-      <div class="service-full" id="security">
+      <hr class="svc-divider"/>
+
+      <!-- 02 Security -->
+      <div class="svc-inner" id="security">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">02</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <div class="service-full-label">Service 02</div>
-          <div class="service-full-title">Security</div>
+          <h2 class="svc-title">Security</h2>
         </div>
-        <div class="service-full-body">
-          <p>The threat landscape has changed significantly. Ransomware, phishing, and supply chain attacks are no longer abstract risks — they affect businesses of every size, including those in the East Midlands. The question isn't whether you're a target; it's whether you're prepared.</p>
-          <p>We take a layered approach: Cyber Essentials certification as a baseline, Fortinet-powered perimeter security, endpoint protection, multi-factor authentication, and staff awareness training that actually sticks. We also carry out vulnerability assessments and produce reports that give you and your board a clear picture of your current exposure.</p>
-          <p>Security doesn't have to mean complexity. Our goal is protection that works without slowing your team down.</p>
+        <div>
+          <p class="svc-intro">The threat landscape has changed. Ransomware, phishing, and supply chain attacks affect businesses of every size. We take a layered approach: strong baseline controls, Fortinet-powered perimeter security, and the ongoing training your people need to stay resilient.</p>
+          <ul class="svc-list">
+            <li>Cyber Essentials and Cyber Essentials Plus certification</li>
+            <li>Fortinet next-generation firewall and perimeter security</li>
+            <li>Endpoint detection and response (EDR) across all devices</li>
+            <li>Multi-factor authentication (MFA) rollout and management</li>
+            <li>Vulnerability assessment and board-level risk reporting</li>
+            <li>Staff security awareness training that actually sticks</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">Fortinet</span>
             <span class="service-tag">Cyber Essentials</span>
@@ -87,21 +173,31 @@
             <span class="service-tag">MFA</span>
             <span class="service-tag">Vulnerability assessment</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
-      <div class="service-full" id="networks">
+      <hr class="svc-divider"/>
+
+      <!-- 03 Networks -->
+      <div class="svc-inner" id="networks">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">03</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
-          <div class="service-full-label">Service 03</div>
-          <div class="service-full-title">Networks</div>
+          <h2 class="svc-title">Networks</h2>
         </div>
-        <div class="service-full-body">
-          <p>Network infrastructure is the foundation everything else sits on. When it works well, nobody notices. When it doesn't, everything stops. We design networks with performance and reliability as the primary requirement — not just whatever is cheapest or quickest to install.</p>
-          <p>We work with Ubiquiti for enterprise-grade wireless deployments and DrayTek for robust routing and WAN connectivity. We design and install structured cabling, configure VLANs for traffic segmentation, deploy VPN solutions for remote access, and manage ongoing network monitoring and maintenance.</p>
-          <p>Whether you're a single-site business or running multiple locations, we engineer the network around your requirements and manage it as part of your overall IT service.</p>
+        <div>
+          <p class="svc-intro">Network infrastructure is the foundation everything else sits on. We design and install networks built for performance and reliability — not just what's cheapest to put in. Managed by us as part of your overall IT service, not handed off after installation.</p>
+          <ul class="svc-list">
+            <li>Enterprise-grade wireless with Ubiquiti UniFi</li>
+            <li>Business routing and WAN connectivity via DrayTek</li>
+            <li>Structured cabling design and installation</li>
+            <li>VLAN configuration and traffic segmentation</li>
+            <li>VPN and secure remote access solutions</li>
+            <li>Ongoing network monitoring, maintenance, and optimisation</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">Ubiquiti</span>
             <span class="service-tag">DrayTek</span>
@@ -110,21 +206,30 @@
             <span class="service-tag">VPN</span>
             <span class="service-tag">SD-WAN</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
-      <div class="service-full" id="mobility">
+      <hr class="svc-divider"/>
+
+      <!-- 04 Mobility -->
+      <div class="svc-inner" id="mobility">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">04</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
-          <div class="service-full-label">Service 04</div>
-          <div class="service-full-title">Mobility</div>
+          <h2 class="svc-title">Mobility</h2>
         </div>
-        <div class="service-full-body">
-          <p>The expectation that work only happens at a fixed desk in a fixed office is long gone. Your team needs to be productive on any device, from any location, without your IT team losing visibility or control of what's connected to your systems.</p>
-          <p>We source and manage mobile devices and data plans, configure mobile device management (MDM) policies that enforce security standards without making devices difficult to use, and set up secure remote access so staff working from home or on the road have the same experience as being in the office.</p>
-          <p>BYOD policies, corporate device management, mobile airtime — we handle all of it as part of a joined-up service.</p>
+        <div>
+          <p class="svc-intro">Your team needs to be productive on any device, from any location — without your IT losing visibility or control of what's connected to your systems. We handle everything from MDM policies to airtime contracts, so you don't have to manage multiple suppliers.</p>
+          <ul class="svc-list">
+            <li>Mobile device management (MDM) policy configuration and enforcement</li>
+            <li>BYOD policy design, implementation, and governance</li>
+            <li>Corporate device sourcing, provisioning, and enrolment</li>
+            <li>Mobile airtime and data plan management</li>
+            <li>Secure remote access for home workers and field teams</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">MDM</span>
             <span class="service-tag">BYOD policy</span>
@@ -132,21 +237,31 @@
             <span class="service-tag">Remote access</span>
             <span class="service-tag">Device provisioning</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
-      <div class="service-full" id="uc">
+      <hr class="svc-divider"/>
+
+      <!-- 05 Unified Communications -->
+      <div class="svc-inner" id="uc">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">05</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.61 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.18v-.26z"/></svg>
           </div>
-          <div class="service-full-label">Service 05</div>
-          <div class="service-full-title">Unified Communications</div>
+          <h2 class="svc-title">Unified Communications</h2>
         </div>
-        <div class="service-full-body">
-          <p>Most businesses use too many separate tools to communicate — a phone system, a video platform, a messaging app, and an email client that don't talk to each other. Unified communications brings all of that into one consistent experience.</p>
-          <p>We implement and support Microsoft Teams Voice, hosted telephony through Gamma, and other UC platforms depending on your requirements. That includes number porting, desk phone hardware, auto-attendants, call queues, and call recording where required.</p>
-          <p>We also manage ongoing changes — new users, number changes, DDI management — as part of your service, so you're not chasing a telecoms provider every time something needs updating.</p>
+        <div>
+          <p class="svc-intro">Most businesses use too many separate tools to communicate — a phone system, a video platform, a chat app, and an email client that don't talk to each other. We bring all of that into one consistent experience and manage the ongoing changes as part of your service.</p>
+          <ul class="svc-list">
+            <li>Microsoft Teams Voice implementation and support</li>
+            <li>Hosted telephony via Gamma for businesses of all sizes</li>
+            <li>Auto-attendants, call queues, and IVR configuration</li>
+            <li>Desk phone hardware supply, installation, and management</li>
+            <li>Number porting and direct dial (DDI) management</li>
+            <li>Call recording where required by compliance or policy</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">Microsoft Teams Voice</span>
             <span class="service-tag">Gamma</span>
@@ -154,21 +269,30 @@
             <span class="service-tag">Number porting</span>
             <span class="service-tag">Call recording</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
-      <div class="service-full" id="connectivity">
+      <hr class="svc-divider"/>
+
+      <!-- 06 Resilient Connectivity -->
+      <div class="svc-inner" id="connectivity">
         <div>
-          <div class="service-full-icon">
+          <div class="svc-num">06</div>
+          <div class="svc-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6l5.5 5.5L12 6l5.5 5.5L23 6"/><path d="M1 18l5.5-5.5L12 18l5.5-5.5L23 18"/></svg>
           </div>
-          <div class="service-full-label">Service 06</div>
-          <div class="service-full-title">Resilient Connectivity</div>
+          <h2 class="svc-title">Resilient Connectivity</h2>
         </div>
-        <div class="service-full-body">
-          <p>For most businesses, internet connectivity is now as fundamental as electricity. A single point of failure is simply not acceptable — yet many businesses are running on a single consumer-grade broadband connection with no failover plan.</p>
-          <p>We source and manage business-grade connectivity including leased lines with guaranteed speeds and SLAs, bonded broadband, and 4G/5G mobile failover that automatically activates if your primary connection goes down. For multi-site businesses, we also design and manage WAN connectivity that links your locations reliably and securely.</p>
-          <p>Connectivity is specified, installed, and monitored by us — not handed off to a carrier with a phone number and a warranty document.</p>
+        <div>
+          <p class="svc-intro">Internet connectivity is now as fundamental as electricity — a single point of failure is simply not acceptable. We source, install, and manage business-grade connectivity with genuine SLAs, automatic failover, and end-to-end support from us, not a carrier helpdesk.</p>
+          <ul class="svc-list">
+            <li>Leased lines with guaranteed speeds and uptime SLAs</li>
+            <li>Dual-ISP and bonded broadband for resilience</li>
+            <li>4G/5G mobile failover with automatic cut-over</li>
+            <li>WAN design and management for multi-site businesses</li>
+            <li>End-to-end installation, monitoring, and ongoing support</li>
+          </ul>
           <div class="service-detail-tags">
             <span class="service-tag">Leased lines</span>
             <span class="service-tag">Dual ISP</span>
@@ -176,6 +300,7 @@
             <span class="service-tag">Bonded broadband</span>
             <span class="service-tag">WAN</span>
           </div>
+          <a class="svc-cta" href="contact.html">Discuss this service →</a>
         </div>
       </div>
 
@@ -190,8 +315,8 @@
           <p>Most businesses start with a conversation. We'll ask the right questions and tell you honestly what would make a difference.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn--white" href="tel:01162520500">0116 252 0500</a>
-          <a class="btn btn--outline-white" href="contact.html">Send a message</a>
+          <a class="btn btn--white btn--lg" href="tel:01162520500">0116 252 0500</a>
+          <a class="btn btn--outline-white btn--lg" href="contact.html">Send a message</a>
         </div>
       </div>
     </div>

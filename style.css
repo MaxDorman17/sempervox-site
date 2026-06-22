@@ -74,12 +74,12 @@ ul, ol { list-style: none; }
   flex-shrink: 0;
 }
 .nav-logo-img {
-  height: 40px;
+  height: 28px;
   width: auto;
   display: block;
 }
 .footer-logo-img {
-  height: 32px;
+  height: 24px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);

@@ -186,52 +186,58 @@ h1, h2, h3, h4 {
 
 /* ── Hero ───────────────────────────────────────────────────────────────────── */
 .hero {
-  background: var(--background);
-  color: #fff;
-  padding: 96px 0 80px;
   position: relative;
   overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -180px; left: -180px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(124,58,237,.2) 0%, transparent 65%);
-  pointer-events: none; z-index: 0;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -120px; right: -80px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(236,72,153,.14) 0%, transparent 65%);
-  pointer-events: none; z-index: 0;
-}
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 64px;
+  min-height: 640px;
+  display: flex;
   align-items: center;
-  position: relative;
+  color: #fff;
+}
+.hero-photo-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10,15,26,.0)  0%,
+    rgba(10,15,26,.18) 30%,
+    rgba(10,15,26,.78) 55%,
+    rgba(10,15,26,.97) 100%
+  );
   z-index: 1;
 }
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 88px 0;
+}
+.hero-content { max-width: 460px; }
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: #fff;
   line-height: 1.1;
-  letter-spacing: -.035em;
-  margin-bottom: 22px;
+  letter-spacing: -.03em;
+  margin-bottom: 20px;
 }
 .hero-sub {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.7;
-  max-width: 480px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
 .hero-trust { display: flex; flex-direction: column; gap: 10px; }
 .hero-trust-label {
   font-size: .72rem;
@@ -250,51 +256,8 @@ h1, h2, h3, h4 {
   padding: 5px 13px;
   border-radius: 4px;
 }
-.hero-card {
-  background: rgba(124,58,237,.08);
-  border: 1px solid rgba(124,58,237,.25);
-  border-radius: 12px;
-  padding: 32px;
-  backdrop-filter: blur(8px);
-}
-.hero-card-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 20px;
-}
-.hero-stat-row { display: flex; flex-direction: column; gap: 16px; }
-.hero-stat {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255,255,255,.05);
-}
-.hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
-.hero-stat-icon {
-  width: 36px; height: 36px;
-  background: rgba(124,58,237,.2);
-  border-radius: 6px;
-  display: grid; place-items: center;
-  flex-shrink: 0;
-}
-.hero-stat-num { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 2px; }
-.hero-stat-desc { font-size: .8rem; color: var(--muted); }
-
-/* ── Hero visual (herologo) ──────────────────────────────────────────────────── */
-.hero-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-logo-visual {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 24px 64px rgba(124,58,237,.55));
-}
+.hero-visual { display: none; }
+.hero-logo-visual { display: none; }
 
 /* ── Services grid ──────────────────────────────────────────────────────────── */
 .services-grid {
@@ -683,9 +646,6 @@ h1, h2, h3, h4 {
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-card { display: none; }
-  .hero-visual { display: none; }
   .hero h1 { font-size: 2.25rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
@@ -697,7 +657,10 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
-  .hero { padding: 64px 0 56px; }
+  .hero { min-height: 520px; }
+  .hero-inner { justify-content: flex-start; padding: 48px 0; }
+  .hero-content { max-width: 100%; }
+  .hero-overlay { background: rgba(10,15,26,.82); }
   .hero h1 { font-size: 1.9rem; }
   .nav-links { display: none; }
   .services-grid { grid-template-columns: 1fr; }

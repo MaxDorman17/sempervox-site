@@ -1,14 +1,16 @@
 /* ── Variables ─────────────────────────────────────────────────────────────── */
 :root {
-  --navy:      #1a3461;
-  --navy-dark: #0f1f3d;
-  --blue:      #1565c0;
-  --blue-hover:#1251a3;
-  --text:      #1a2332;
-  --muted:     #5c6b82;
+  --navy:      #0F172A;
+  --navy-dark: #080e1e;
+  --blue:      #7C3AED;
+  --blue-hover:#6d28d9;
+  --pink:      #EC4899;
+  --accent:    #3B82F6;
+  --text:      #0F172A;
+  --muted:     #64748b;
   --bg:        #ffffff;
-  --bg-alt:    #f4f7fb;
-  --border:    #dde3ee;
+  --bg-alt:    #faf7ff;
+  --border:    #e8e4f8;
   --radius:    6px;
 }
 
@@ -134,7 +136,7 @@ ul, ol { list-style: none; }
   color: var(--navy);
   border-color: #fff;
 }
-.btn--white:hover { background: #e8edf5; border-color: #e8edf5; }
+.btn--white:hover { background: #f3e8ff; border-color: #f3e8ff; }
 .btn--outline-white {
   background: transparent;
   color: #fff;
@@ -150,11 +152,11 @@ ul, ol { list-style: none; }
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--pink);
   margin-bottom: 12px;
 }
 .section--navy .label,
-.section--dark .label { color: #93c5fd; }
+.section--dark .label { color: #c4b5fd; }
 h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.2;
@@ -175,14 +177,14 @@ h1, h2, h3, h4 {
   line-height: 1.7;
 }
 .section--navy .section-lead,
-.section--dark .section-lead { color: #93c5fd; }
+.section--dark .section-lead { color: #c4b5fd; }
 
 /* ── Hero ───────────────────────────────────────────────────────────────────── */
 .hero {
   background: var(--navy);
   color: #fff;
   padding: 96px 0 80px;
-  border-bottom: 4px solid #122852;
+  border-bottom: 4px solid #1a0930;
 }
 .hero-inner {
   display: grid;
@@ -200,7 +202,7 @@ h1, h2, h3, h4 {
 }
 .hero-sub {
   font-size: 1.1rem;
-  color: #93c5fd;
+  color: #c4b5fd;
   line-height: 1.7;
   max-width: 480px;
   margin-bottom: 36px;
@@ -290,10 +292,10 @@ h1, h2, h3, h4 {
   transition: background .15s, box-shadow .2s, transform .2s;
   cursor: default;
 }
-.service-card:hover { background: #f0f4fb; box-shadow: 0 8px 32px rgba(26,52,97,.1); transform: translateY(-3px); }
+.service-card:hover { background: #f0ebff; box-shadow: 0 8px 32px rgba(26,52,97,.1); transform: translateY(-3px); }
 .service-icon {
   width: 44px; height: 44px;
-  background: #e8f0fc;
+  background: #ede9fe;
   border-radius: 8px;
   display: grid; place-items: center;
   margin-bottom: 18px;
@@ -319,7 +321,7 @@ h1, h2, h3, h4 {
   font-size: .7rem;
   font-weight: 600;
   color: var(--blue);
-  background: #e8f0fc;
+  background: #ede9fe;
   padding: 2px 8px;
   border-radius: 3px;
   letter-spacing: .01em;
@@ -371,7 +373,7 @@ h1, h2, h3, h4 {
 }
 .value-dot {
   width: 8px; height: 8px;
-  background: var(--blue);
+  background: var(--pink);
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 7px;
@@ -405,7 +407,7 @@ h1, h2, h3, h4 {
   letter-spacing: .01em;
   transition: border-color .15s, background .15s;
 }
-.partner-badge:hover { border-color: #b0c4e8; background: #eaf0fa; }
+.partner-badge:hover { border-color: #a78bfa; background: #f3e8ff; }
 
 /* ── CTA band ───────────────────────────────────────────────────────────────── */
 .cta-band {
@@ -487,7 +489,7 @@ h1, h2, h3, h4 {
   background: var(--navy);
   color: #fff;
   padding: 64px 0;
-  border-bottom: 4px solid #122852;
+  border-bottom: 4px solid #1a0930;
 }
 .page-hero .label { color: rgba(255,255,255,.45); }
 .page-hero h1 {
@@ -515,7 +517,7 @@ h1, h2, h3, h4 {
 .service-full:last-child { border-bottom: none; }
 .service-full-icon {
   width: 52px; height: 52px;
-  background: #e8f0fc;
+  background: #ede9fe;
   border-radius: 8px;
   display: grid; place-items: center;
   margin-bottom: 12px;
@@ -569,7 +571,7 @@ h1, h2, h3, h4 {
 }
 .contact-detail-icon {
   width: 40px; height: 40px;
-  background: #e8f0fc;
+  background: #ede9fe;
   border-radius: 7px;
   display: grid; place-items: center;
   flex-shrink: 0;
@@ -613,7 +615,7 @@ h1, h2, h3, h4 {
 }
 .support-card-icon {
   width: 44px; height: 44px;
-  background: #e8f0fc;
+  background: #ede9fe;
   border-radius: 8px;
   display: grid; place-items: center;
   margin-bottom: 16px;
@@ -656,7 +658,7 @@ h1, h2, h3, h4 {
   transition: border-color .18s, box-shadow .18s;
 }
 .partner-logo-card:hover {
-  border-color: #b0c4e8;
+  border-color: #a78bfa;
   box-shadow: 0 4px 18px rgba(26,52,97,.09);
 }
 .partner-logo-card img {

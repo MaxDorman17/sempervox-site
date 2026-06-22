@@ -628,6 +628,127 @@ h1, h2, h3, h4 {
   box-shadow: 0 12px 48px rgba(124,58,237,.2);
 }
 
+/* ── Contact page redesign ───────────────────────────────────────────────────── */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 56px;
+}
+.contact-method-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.contact-method-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(124,58,237,.15);
+  transform: translateY(-3px);
+}
+.contact-method-icon {
+  width: 52px; height: 52px;
+  background: var(--gradient);
+  border-radius: 12px;
+  display: grid; place-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+.contact-method-card h3 { font-size: 1rem; color: #fff; margin-bottom: 8px; }
+.contact-method-card > p { font-size: .84rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.contact-method-value {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  word-break: break-all;
+}
+.contact-method-btn { margin-top: auto; }
+
+/* Main form + sidebar */
+.contact-main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+}
+.contact-form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+}
+.contact-form-card h2 { font-size: 1.4rem; margin-bottom: 6px; }
+.contact-form-card > p { font-size: .88rem; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+
+/* Sidebar cards */
+.contact-sidebar { display: flex; flex-direction: column; gap: 16px; }
+.contact-hours {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.contact-hours-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.hours-time { color: #fff; font-weight: 600; }
+.hours-time.closed { color: var(--muted); font-weight: 400; }
+.hours-note {
+  font-size: .76rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(124,58,237,.1);
+}
+.contact-steps {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.contact-steps-header {
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.step-item:last-child { margin-bottom: 0; }
+.step-num {
+  width: 26px; height: 26px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: .7rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-text strong { display: block; font-size: .85rem; color: #fff; margin-bottom: 2px; }
+.step-text span { font-size: .78rem; color: var(--muted); line-height: 1.55; }
+
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .hero h1 { font-size: 2.25rem; }
@@ -636,6 +757,8 @@ h1, h2, h3, h4 {
   .about-split { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .contact-split { grid-template-columns: 1fr; }
+  .contact-methods { grid-template-columns: 1fr; }
+  .contact-main { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .service-full { grid-template-columns: 1fr; }
 }
@@ -655,4 +778,6 @@ h1, h2, h3, h4 {
   .cta-band { flex-direction: column; text-align: center; }
   .support-options { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr; }
+  .contact-form-card { padding: 24px; }
+  .contact-methods { grid-template-columns: 1fr; }
 }

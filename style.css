@@ -749,6 +749,58 @@ h1, h2, h3, h4 {
 .step-text strong { display: block; font-size: .85rem; color: #fff; margin-bottom: 2px; }
 .step-text span { font-size: .78rem; color: var(--muted); line-height: 1.55; }
 
+/* ── Contact page v2 (symmetric) ────────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.contact-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+}
+.contact-info-card h2 { font-size: 1.4rem; margin-bottom: 8px; }
+.card-sub { font-size: .9rem; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+.contact-divider { height: 1px; background: rgba(124,58,237,.15); margin: 28px 0; }
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+.contact-info-item:last-child { margin-bottom: 0; }
+.contact-info-icon {
+  width: 40px; height: 40px;
+  background: rgba(124,58,237,.12);
+  border: 1px solid rgba(124,58,237,.2);
+  border-radius: 8px;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.contact-info-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.contact-info-value { font-size: .92rem; color: var(--text); line-height: 1.6; }
+.contact-info-value a { color: #fff; font-weight: 600; }
+.contact-info-value a:hover { color: var(--secondary); }
+.contact-info-value strong { display: block; color: #fff; font-size: 1rem; font-weight: 700; }
+.contact-hours-title {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .hero h1 { font-size: 2.25rem; }
@@ -759,6 +811,7 @@ h1, h2, h3, h4 {
   .contact-split { grid-template-columns: 1fr; }
   .contact-methods { grid-template-columns: 1fr; }
   .contact-main { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .service-full { grid-template-columns: 1fr; }
 }

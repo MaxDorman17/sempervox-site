@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css?v=4"/>
+<link rel="stylesheet" href="style.css?v=5"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -267,30 +267,64 @@
     <div class="container">
       <span class="label">Client stories</span>
       <h2 class="section-title">Trusted by businesses across the East Midlands.</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <span class="testimonial-quote-mark">&ldquo;</span>
-          <p class="testimonial-quote">I have worked with Sempervox for 13 years and the staff have always been friendly, accessible and knowledgeable. The team are fantastic in identifying our needs and ensuring we have the best technology at the best rates. They are proactive in their approach and always on hand when we need them.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Aaron Bargewell</div>
-            <div class="testimonial-role">Head of Finance and Operations, Giant Bicycles</div>
+      <div class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="testimonial-quote-mark">&ldquo;</span>
+              <p class="testimonial-quote">I have worked with Sempervox for 13 years and the staff have always been friendly, accessible and knowledgeable. The team are fantastic in identifying our needs and ensuring we have the best technology at the best rates. They are proactive in their approach and always on hand when we need them.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">AB</div>
+                <div>
+                  <div class="testimonial-name">Aaron Bargewell</div>
+                  <div class="testimonial-role">Head of Finance and Operations, Giant Bicycles</div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="testimonial-quote-mark">&ldquo;</span>
+              <p class="testimonial-quote">We have worked with Sempervox for over 12 years and they have been key in helping us to safely grow our business. Sempervox have understood how we work and the regulations surrounding our industry, to recommend and deliver quality telecoms and IT services. We regard the people at Sempervox as a key part of our team.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SH</div>
+                <div>
+                  <div class="testimonial-name">Steve Harvey</div>
+                  <div class="testimonial-role">Group MD, Westerby Investment Management</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="testimonial-quote-mark">&ldquo;</span>
+              <p class="testimonial-quote">We have worked with Sempervox for over 7 years and they have always provided a friendly and professional service. The delivery of an entirely new IT and telecoms system was the biggest change to our systems in over 15 years, and we knew we could trust Sempervox. Regular communication and a willingness to go above and beyond created a feeling that we are properly looked after.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">LE</div>
+                <div>
+                  <div class="testimonial-name">Lizzie Evans</div>
+                  <div class="testimonial-role">Managing Director, Bentons</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="testimonial-card">
-          <span class="testimonial-quote-mark">&ldquo;</span>
-          <p class="testimonial-quote">We have worked with Sempervox for over 12 years and they have been key in helping us to safely grow our business. Sempervox have understood how we work and the regulations surrounding our industry, to recommend and deliver quality telecoms and IT services. We regard them as a key part of our team.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Steve Harvey</div>
-            <div class="testimonial-role">Group MD, Westerby Investment Management</div>
+        <div class="testimonial-controls">
+          <button class="testimonial-btn" id="testimonialPrev" aria-label="Previous testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="testimonial-dots">
+            <button class="testimonial-dot is-active" data-index="0" aria-label="Testimonial 1"></button>
+            <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+            <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <span class="testimonial-quote-mark">&ldquo;</span>
-          <p class="testimonial-quote">We have worked with Sempervox for over 7 years and they have always provided a friendly and professional service. The delivery of an entirely new IT and telecoms system was the biggest change to our systems in over 15 years, and we knew we could trust Sempervox. Regular communication and a willingness to go above and beyond created a feeling that we are properly looked after.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Lizzie Evans</div>
-            <div class="testimonial-role">Managing Director, Bentons</div>
-          </div>
+          <button class="testimonial-btn" id="testimonialNext" aria-label="Next testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </div>

@@ -36,6 +36,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Testimonial carousel
+  var track = document.getElementById("testimonialTrack");
+  if (track) {
+    var slides = track.children;
+    var dots = document.querySelectorAll(".testimonial-dot");
+    var prevBtn = document.getElementById("testimonialPrev");
+    var nextBtn = document.getElementById("testimonialNext");
+    var current = 0;
+    var total = slides.length;
+    var autoplay;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = "translateX(-" + (current * 100) + "%)";
+      dots.forEach(function (d, i) {
+        d.classList.toggle("is-active", i === current);
+      });
+    }
+
+    function startAutoplay() {
+      autoplay = setInterval(function () { goTo(current + 1); }, 6000);
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { clearInterval(autoplay); goTo(current - 1); startAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { clearInterval(autoplay); goTo(current + 1); startAutoplay(); });
+    dots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        clearInterval(autoplay);
+        goTo(parseInt(this.getAttribute("data-index")));
+        startAutoplay();
+      });
+    });
+
+    startAutoplay();
+  }
+
   // Contact form submit simulation
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");

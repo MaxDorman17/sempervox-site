@@ -49,11 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function goTo(index) {
       current = (index + total) % total;
-      track.style.transform = "translateX(-" + (current * 100) + "%)";
+      track.style.transform = "translateX(-" + (current * track.parentElement.offsetWidth) + "px)";
       dots.forEach(function (d, i) {
         d.classList.toggle("is-active", i === current);
       });
     }
+
+    window.addEventListener("resize", function () {
+      track.style.transition = "none";
+      track.style.transform = "translateX(-" + (current * track.parentElement.offsetWidth) + "px)";
+      setTimeout(function () { track.style.transition = ""; }, 50);
+    });
 
     function startAutoplay() {
       autoplay = setInterval(function () { goTo(current + 1); }, 6000);

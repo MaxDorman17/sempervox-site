@@ -923,6 +923,34 @@ html { scroll-behavior: smooth; }
 }
 .svc-cta:hover { gap: 12px; text-decoration: none; }
 
+/* ── Why grid ───────────────────────────────────────────────────────────────── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.why-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 32px 28px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.why-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(124,58,237,.12);
+}
+.why-icon {
+  width: 48px; height: 48px;
+  background: var(--gradient);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  margin-bottom: 20px;
+}
+.why-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.why-card p { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+
 /* ── Mobile nav / hamburger ─────────────────────────────────────────────────── */
 .nav-burger {
   display: none;
@@ -998,6 +1026,7 @@ html { scroll-behavior: smooth; }
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .hero h1 { font-size: 2.25rem; }
+  .why-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .about-split { grid-template-columns: 1fr; gap: 40px; }
